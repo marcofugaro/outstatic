@@ -15,7 +15,7 @@ export type Document = {
 }
 
 export type FileType = {
-  type: 'image'
+  type: 'image' | 'video'
   blob?: string
   filename: string
   content: string

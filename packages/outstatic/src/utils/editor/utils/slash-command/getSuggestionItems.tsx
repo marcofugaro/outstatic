@@ -5,6 +5,8 @@ import {
   Heading2,
   Heading3,
   Image as ImageIcon,
+  PlaySquare as VideoIcon,
+  Youtube,
   List,
   ListOrdered,
   TableIcon,
@@ -120,6 +122,18 @@ const items = [
     description: 'Upload or embed with a link.',
     searchTerms: ['photo', 'picture', 'media'],
     icon: <ImageIcon size={18} />
+  },
+  {
+    title: 'Video',
+    description: 'Upload or embed with a link.',
+    searchTerms: ['video', 'media'],
+    icon: <VideoIcon size={18} />
+  },
+  {
+    title: 'YouTube Embed',
+    description: 'Embed a YouTube video.',
+    searchTerms: ['video', 'youtube', 'media'],
+    icon: <Youtube size={18} />
   },
   {
     title: 'Table',

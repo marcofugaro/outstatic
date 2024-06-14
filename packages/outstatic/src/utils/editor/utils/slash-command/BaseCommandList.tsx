@@ -19,11 +19,13 @@ export const BaseCommandList = ({
   items,
   command,
   setImageMenu,
+  setVideoMenu,
   editor,
   range
 }: {
   items: CommandItemProps[]
   setImageMenu: (value: boolean) => void
+  setVideoMenu: (value: boolean) => void
   command: any
   editor: Editor
   range: Range
@@ -63,6 +65,8 @@ export const BaseCommandList = ({
           )
         } else if (item.title === 'Image') {
           setImageMenu(true)
+        } else if (item.title === 'Video') {
+          setVideoMenu(true)
         } else {
           command(item)
         }

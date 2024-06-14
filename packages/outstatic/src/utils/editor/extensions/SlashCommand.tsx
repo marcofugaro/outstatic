@@ -5,6 +5,7 @@ import { ReactNode, useState } from 'react'
 import tippy from 'tippy.js'
 import { BaseCommandList } from '../utils/slash-command/BaseCommandList'
 import ImageCommandList from '../utils/slash-command/ImageCommandList'
+import VideoCommandList from '../utils/slash-command/VideoCommandList'
 import { getSuggestionItems } from '../utils/slash-command/getSuggestionItems'
 
 export type CommandItemProps = {
@@ -77,6 +78,7 @@ const CommandList = ({
   range: Range
 }) => {
   const [imageMenu, setImageMenu] = useState(false)
+  const [videoMenu, setVideoMenu] = useState(false)
 
   return items.length > 0 ? (
     imageMenu ? (
@@ -85,11 +87,18 @@ const CommandList = ({
         setImageMenu={setImageMenu}
         range={range}
       />
+    ) : videoMenu ? (
+      <VideoCommandList
+        editor={editor}
+        setVideoMenu={setVideoMenu}
+        range={range}
+      />
     ) : (
       <BaseCommandList
         items={items}
         command={command}
         setImageMenu={setImageMenu}
+        setVideoMenu={setVideoMenu}
         editor={editor}
         range={range}
       />
